@@ -40,7 +40,7 @@ const About = () => {
                                 <div className="inline-flex items-center gap-2.5 px-5 py-2.5 border border-primary/30 bg-primary/10 rounded-full w-fit">
                                     <Code2 className="w-4 h-4 text-primary" />
                                     <span className="text-sm text-primary font-medium">
-                                        Full-Stack Developer
+                                       About Me
                                     </span>
                                     <Sparkles className="w-4 h-4 text-primary" />
                                 </div>
@@ -49,7 +49,7 @@ const About = () => {
 
                             <FadeIn delay={100}>
                                 <h2 className="text-4xl lg:text-5xl font-normal text-white leading-tight">
-                                    Crafting Digital Experiences That Matter
+                                Building Modern Web Applications
                                 </h2>
                             </FadeIn>
 
@@ -113,10 +113,9 @@ const About = () => {
                                         </div>
 
                                         <div className="flex-1">
-                                            <h3 className="text-lg font-semibold text-white mb-2">Expertise</h3>
+                                            <h3 className="text-lg font-semibold text-white mb-2">MERN Stack</h3>
                                             <p className="text-sm text-white/70 leading-relaxed">
-                                                Specialized in building scalable web applications with modern technologies and best practices.
-                                            </p>
+                                          Building full-stack web applications with React, Node.js, Express, and MongoDB.                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -134,8 +133,7 @@ const About = () => {
                                     <h3 className="text-base font-semibold text-white mb-2">Clean Code</h3>
 
                                     <p className="text-sm text-white/70 leading-relaxed">
-                                        Writing maintainable, well-documented code
-                                    </p>
+                                     Writing clean, reusable, and maintainable code following best practices.                                    </p>
                                 </div>
                             </div>
 
@@ -149,11 +147,10 @@ const About = () => {
                                         <Download className="w-5 h-5 text-primary " />
                                     </div>
 
-                                    <h3 className="text-base font-semibold text-white mb-2">Performance</h3>
+                                    <h3 className="text-base font-semibold text-white mb-2">Responsive Design</h3>
 
                                     <p className="text-sm text-white/70 leading-relaxed">
-                                        Optimizing for speed and efficiency in every project.
-                                    </p>
+                                 Creating responsive websites that work smoothly across all devices.                                    </p>
                                 </div>
                             </div>
 

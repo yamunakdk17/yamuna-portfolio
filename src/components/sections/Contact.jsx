@@ -91,13 +91,14 @@ const Contact = () => {
                         </div>
 
                         <h2 className="text-4xl lg:text-5xl font-normal text-white mb-4">
-                            Let's Work Together
+                            Get in Touch
                         </h2>
 
                         <p className="text-lg text-white/60 max-w-2xl mx-auto ">
-                            Have a project in mind? Let's discuss how we can help.
-                        </p>
+                        
 
+                            Feel free to reach out if you have any questions or opportunities. I'd be happy to hear from you.
+                            </p>
                     </div>
                 </FadeIn>
 
@@ -210,8 +211,7 @@ const Contact = () => {
                                 </h3>
 
                                 <p className="text-white/60 leading-relaxed">
-                                    I'm always open to discussing new projects,creativve ideas,or opportunity to be part of your vision.feel free to reach out!
-
+                                    I'm always open to learning, connecting, and exploring new opportunities.
                                 </p>
                             </div>
 

@@ -4,12 +4,12 @@ export const PERSONAL_INFO = {
     title: "MERN STACK developer",
     email: "yamunakdk7@gmail.com",
     location: "kathmandu",
-    tagline:
-        "Crafting seamless digital experiences with modern web technologies",
+    // tagline:
+    //     "Crafting seamless digital experiences with modern web technologies",
     resume: "/Resume.pdf",
-    bio: [
-        "I am a passionate React developer with over 3+ years of experience building scalable web applications.",
-        "I specialize in frontend development and love working with modern JavaScript frameworks."
+    bio:  [
+        "I enjoy creating responsive and user-friendly websites.",
+        "Always learning and building projects to improve my development skills."
     ]
 };
 export const SOCIAL_LINKS = {

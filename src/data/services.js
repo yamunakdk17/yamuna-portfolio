@@ -1,29 +1,29 @@
 export const services = [
     {
         id: 1,
-        title: "Frontend Development",
+        title: "Responsive Websites",
         description:
-            "Responsive and modern UI using React, Tailwind CSS, and animations.",
+            " Creating websites that look and work great on all screen sizes.",
     },
 
     {
         id: 2,
-        title: "Backend Development",
+        title: "Full-Stack Applications",
         description:
-            "REST APIs, authentication, and real-time systems using Node.js & Express.",
+            "Building complete web applications from frontend to backend.",
     },
 
     {
         id: 3,
-        title: "Chat Applications",
+        title: "API Integration",
         description:
-            "Real-time messaging apps with Socket.io, online users, and typing indicators.",
+            "Connecting applications with APIs to deliver dynamic features.",
     },
 
     {
         id: 4,
-        title: "AI / GenAI Apps",
+        title: "Continuous Improvement",
         description:
-            "AI-powered web apps using OpenAI API for content generation and automation.",
+            "Learning new technologies and improving every project I build.",
     },
 ];
