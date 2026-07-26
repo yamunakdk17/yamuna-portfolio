@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { PERSONAL_INFO, SOCIAL_LINKS } from "../../utils/constants";
 import FadeIn from "../animations/FadeIn";
+import axios from "axios"
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ const Contact = () => {
 
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (!formData.name || !formData.email || !formData.message) {
@@ -53,21 +54,32 @@ const Contact = () => {
             return;
         }
 
-        setStatus({
-            type: "success",
-            message: "Message sent successfully!",
-        });
+        try {
+            const response = await axios.post(
+                "http://localhost:3000/api/contact",
+                formData
+            );
 
-        setFormData({
-            name: "",
-            email: "",
-            message: "",
-        });
+            setStatus({
+                type: "success",
+                message: response.data.message,
+            });
 
-        setTimeout(() => {
-            setStatus({ type: "", message: "" });
-        }, 5000);
-    };
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                message: "",
+            });
+
+        } catch (error) {
+            setStatus({
+                type: "error",
+                message:
+                    error.response?.data?.message || "Something went wrong.",
+            });
+        }
+       };
     // const socialIcons = {
     //     GitHub: Github,
     //     Linkedin: Linkedin,
