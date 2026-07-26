@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
     Mail,
     MapPin,
@@ -24,6 +25,11 @@ const Contact = () => {
         message: "",
     });
 
+    // ...
+    const [loading, setLoading] = useState(false);
+
+
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -32,14 +38,13 @@ const Contact = () => {
     };
 
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (!formData.name || !formData.email || !formData.message) {
             setStatus({
                 type: "error",
-                message: "Please fill in all fields",
+                message: "Please fill in all fields.",
             });
             return;
         }
@@ -49,15 +54,23 @@ const Contact = () => {
         if (!emailRegex.test(formData.email)) {
             setStatus({
                 type: "error",
-                message: "Please enter a valid email",
+                message: "Please enter a valid email.",
             });
             return;
         }
 
         try {
+            setLoading(true);
+
             const response = await axios.post(
-                "http://localhost:3000/api/contact",
-                formData
+                `${import.meta.env.VITE_API_URL}/api/contact`,
+                {
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    subject: "Portfolio Contact",
+                    message: formData.message,
+                }
             );
 
             setStatus({
@@ -76,10 +89,20 @@ const Contact = () => {
             setStatus({
                 type: "error",
                 message:
-                    error.response?.data?.message || "Something went wrong.",
+                    error.response?.data?.message ||
+                    "Failed to send message.",
             });
+        } finally {
+            setLoading(false);
+
+            setTimeout(() => {
+                setStatus({
+                    type: "",
+                    message: "",
+                });
+            }, 5000);
         }
-       };
+    };
     // const socialIcons = {
     //     GitHub: Github,
     //     Linkedin: Linkedin,
@@ -189,10 +212,13 @@ const Contact = () => {
                                     />
 
                                 </div>
-                                <button type="submit"
-                                    className="w-full px-6 py-3 bg-linear-to-r from-primary/10 to-primary text-white font-medium rounded-xl hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2 group  "
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="w-full px-6 py-3 bg-linear-to-r from-primary/10 to-primary text-white font-medium rounded-xl hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
                                 >
-                                    <span>Send Message</span>
+                                    <span>{loading ? "Sending..." : "Send Message"}</span>
+
                                     <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                                 </button>
 
