@@ -20,5 +20,8 @@ app.use(
 );
 
 app.use("/api/contact", contactRoutes);
+app.get("/", (req, res) => {
+    res.send("Backend is running!");
+});
 
 module.exports = app;
