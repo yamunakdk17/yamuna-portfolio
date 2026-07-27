@@ -3,6 +3,15 @@ const dns = require("dns");
 
 dns.setDefaultResultOrder("ipv4first");
 
+// const transporter = nodemailer.createTransport({
+//     host: "smtp.gmail.com",
+//     port: 587,
+//     secure: false,
+//     auth: {
+//         user: process.env.EMAIL_USER,
+//         pass: process.env.EMAIL_PASS,
+//     },
+// });
 const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
@@ -11,6 +20,9 @@ const transporter = nodemailer.createTransport({
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
     },
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 10000,
 });
 
 const sendContactMessage = async (req, res) => {
@@ -19,7 +31,15 @@ const sendContactMessage = async (req, res) => {
 
         const { name, email, phone, message } = req.body;
 
-        console.log("Sending email...");
+        console.log("Sending email...");   //
+
+
+        console.log("Verifying SMTP...");
+
+        await transporter.verify();
+
+        console.log("SMTP verified");///
+        
 
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
