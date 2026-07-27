@@ -12,8 +12,8 @@ app.use(
     cors({
         origin: [
             "http://localhost:5173",
-            "http://localhost:5174",
-            "https://yamunakdk.netlify.app",
+            "https://yamunakhadka.com.np",
+            "https://www.yamunakhadka.com.np",
         ],
         credentials: true,
     })
