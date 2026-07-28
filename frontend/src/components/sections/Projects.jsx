@@ -81,6 +81,7 @@ const Projects = () => {
                         </p>
                     </div>
                 </FadeIn>
+              <div className="flex flex-wrap justify-center gap-4 mb-12">
                 {categories.map((category) => {
                     const Icon = categoryIcons[category];
 
@@ -89,14 +90,14 @@ const Projects = () => {
                             key={category}
                             onClick={() => handleCategoryChange(category)}
                             className={`group relative px-6 py-3 rounded-full font-medium transition-all duration-300
-            ${activeCategory === category
+                                  ${activeCategory === category
                                     ? 'text-white'
                                     : 'text-white/60 hover:text-white'
-                                }`}
-                        >
-                            <div
+                                        }`}
+                                      >
+                                      <div
                                 className={`absolute inset-0 rounded-full transition-all duration-300
-                ${activeCategory === category
+                                 ${activeCategory === category
                                         ? 'bg-primary/10 opacity-100'
                                         : 'bg-white/5 border border-white/10 group-hover:bg-white/10'
                                     }`}
@@ -113,6 +114,7 @@ const Projects = () => {
                         </button>
                     );
                 })}
+                </div>
                 {/* Projects Carousel */}
                 <FadeIn delay={200}>
                     <div className="relative">
