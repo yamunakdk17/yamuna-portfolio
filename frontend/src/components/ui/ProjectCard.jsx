@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink,Github, TrendingUp } from 'lucide-react';
+import { ExternalLink, GitHub, TrendingUp } from "lucide-react"; 
 const ProjectCard = ({ project }) => {
     const {
         title,
@@ -47,8 +47,7 @@ const ProjectCard = ({ project }) => {
                             title="GitHub"
                         >
                             {/* <Github className="" /> */}
-                            <Github className="w-4 h-4 text-white" />
-                        </a>
+                            <GitHub className="w-4 h-4 text-white" />                        </a>
                     )}
                 </div>
                 <div className="absolute top-4 left-4">
