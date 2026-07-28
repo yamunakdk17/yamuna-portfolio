@@ -22,7 +22,7 @@ export const projects = [
         title: "GenAI",
         category: "Full Stack",
         description:
-            "AI-powered interview preparation platform that analyzes resumes, job descriptions, and self-descriptions to generate interview questions, match scores, skill gap analysis, and ATS-friendly reports using AI.",
+            "AI-powered interview platform for resume analysis, mock interviews, and ATS-friendly reports. ",
         tech: [
             "React",
             "Node.js",
