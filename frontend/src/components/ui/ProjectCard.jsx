@@ -1,10 +1,21 @@
 import React from 'react';
-import { ExternalLink, TrendingUp } from 'lucide-react';
+import { ExternalLink,Github, TrendingUp } from 'lucide-react';
 const ProjectCard = ({ project }) => {
-    const { title, description, image, technologies, metrics, demoUrl, github } = project;
-
+    const {
+        title,
+        description,
+        image,
+        tech,
+        metrics,
+        live,
+        github
+    } = project;
     return (
-        <div className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden pb-2 hover:border-primary/30 transition-all duration-300">
+        <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden pb-2 hover:border-primary/30 transition-all duration-300">
             <div className="relative h-56 overflow-hidden">
                 <img
                     src={image}
@@ -15,9 +26,9 @@ const ProjectCard = ({ project }) => {
                 <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300  "></div>
 
                 <div className="absolute bottom-4 right-4 flex items-center gap-3">
-                    {demoUrl && (
+                    {live && (
                         <a
-                            href={demoUrl}
+                            href={live}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-2.5 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 hover:bg-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-110 "
@@ -36,6 +47,7 @@ const ProjectCard = ({ project }) => {
                             title="GitHub"
                         >
                             {/* <Github className="" /> */}
+                            <Github className="w-4 h-4 text-white" />
                         </a>
                     )}
                 </div>
@@ -59,12 +71,12 @@ const ProjectCard = ({ project }) => {
                     </div>
 
                 <div className="flex mt-4 flex-wrap  gap-2">
-                        {technologies?.map((tech, index) => (
-                            <span key={index}
+                    {tech?.map((item, index) => (
+                                <span key={index}
                                 className="px-3 py-1 text-xs font-medium text-primary bg-primary/10 border border-primary/20 rounded-lg hover:bg-primary/20 transition-colors duration-300 "
                                 >
-                                {tech}
-                            </span>
+                            {item}
+                              </span>
                         ))}
                     </div>
                     {metrics && (
@@ -80,7 +92,7 @@ const ProjectCard = ({ project }) => {
 
 
             
-        </div>
+        </a>
     );
 };
 
