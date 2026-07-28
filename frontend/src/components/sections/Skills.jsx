@@ -54,8 +54,13 @@ const skillCategories = [
             },
             {
                 name: "Express.js",
-            
-                 icon: <FaServer className="text-white text-4xl" />,
+                icon: (
+                    <img
+                        src="/express.png"
+                        alt="Express.js"
+                        className="w-12 h-12 object-contain"
+                    />
+                ),
             },
             {
                 name: "MongoDB",

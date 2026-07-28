@@ -25,12 +25,18 @@ dns.setDefaultResultOrder("ipv4first");
 //     socketTimeout: 10000,
 // });
 const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host:"smtp.gmail.com",
+    port: 465,
+    secure: true,
+    // service: "gmail",
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
     },
-    family: 4, // Force IPv4
+    connectionTimeout: 30000,
+    greetingTimeout: 30000,
+    socketTimeout: 30000,
+    // family: 4, // Force IPv4
 });
 
 const sendContactMessage = async (req, res) => {
@@ -42,11 +48,11 @@ const sendContactMessage = async (req, res) => {
         console.log("Sending email...");   //
 
 
-        console.log("Verifying SMTP...");
+        // console.log("Verifying SMTP...");
 
-        await transporter.verify();
+        // await transporter.verify();
 
-        console.log("SMTP verified");///
+        // console.log("SMTP verified");///
         
 
         await transporter.sendMail({
