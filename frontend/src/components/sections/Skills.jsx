@@ -5,7 +5,7 @@ import {
     FaGitAlt,
     FaGithub,
     FaCode,
-    FaServer,
+    
 
 } from "react-icons/fa";
 

@@ -3,7 +3,7 @@ import {
     FaNodeJs,
     FaGitAlt,
     FaCode,
-    FaServer,
+    
 } from "react-icons/fa";
 
 import {
