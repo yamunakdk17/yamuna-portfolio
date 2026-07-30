@@ -12,8 +12,11 @@ app.use(
     cors({
         origin: [
             "http://localhost:5173",
+            "https://yamuna-portfolio-black.vercel.app",
+            "https://yamuna-portfolio-q455eqh1u-yamunakdk17s-projects.vercel.app",
             "https://yamunakhadka.com.np",
             "https://www.yamunakhadka.com.np",
+
         ],
         credentials: true,
     })
