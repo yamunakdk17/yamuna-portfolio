@@ -14,8 +14,8 @@ export const projects = [
             "Socket.io"
         ],
         image: "/chatapp.png",
-        github: "https://github.com/yamunakdk17/Project-QuickChat",
-        live: "https://quickchat-talk.netlify.app",
+        github: "https://github.com/yamunakdk17/message",
+        live: "https://messagee-omega.vercel.app",
     },
     {
         id: 2,
