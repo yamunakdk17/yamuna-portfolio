@@ -34,7 +34,7 @@ export const projects = [
         ],
         image: "/genai.png",
         github: "https://github.com/yamunakdk17/project-GENAI",
-        live: "https://project-genai.netlify.app",
+        live: "https://genai-iota-eight.vercel.app/",
     }
 ];
 export const categories = [
