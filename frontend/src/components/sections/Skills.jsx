@@ -1,12 +1,10 @@
 import FadeIn from "../animations/FadeIn";
+
 import {
     FaReact,
     FaNodeJs,
     FaGitAlt,
-    FaGithub,
     FaCode,
-    
-
 } from "react-icons/fa";
 
 import {
@@ -16,6 +14,8 @@ import {
     SiTailwindcss,
     SiMongodb,
     SiPostman,
+    SiDjango,
+    SiMysql,
 } from "react-icons/si";
 
 const skillCategories = [
@@ -63,12 +63,26 @@ const skillCategories = [
                 ),
             },
             {
-                name: "MongoDB",
-                icon: <SiMongodb className="text-green-600 text-4xl" />,
+                name: "Django",
+                icon: <SiDjango className="text-green-500 text-4xl" />,
             },
             {
                 name: "REST APIs",
                 icon: <FaCode className="text-blue-400 text-4xl" />,
+            },
+        ],
+    },
+
+    {
+        title: "Database Skills",
+        skills: [
+            {
+                name: "MongoDB",
+                icon: <SiMongodb className="text-green-600 text-4xl" />,
+            },
+            {
+                name: "MySQL",
+                icon: <SiMysql className="text-blue-500 text-4xl" />,
             },
         ],
     },
@@ -84,14 +98,10 @@ const skillCategories = [
                 name: "Postman",
                 icon: <SiPostman className="text-orange-400 text-4xl" />,
             },
-           
-            
             {
                 name: "MongoDB Compass",
                 icon: <SiMongodb className="text-green-600 text-4xl" />,
             },
-
-           
         ],
     },
 ];
@@ -110,7 +120,6 @@ const Skills = () => {
 
                 <FadeIn>
                     <div className="text-center mb-16">
-
                         <h2 className="text-5xl font-bold text-white mb-4">
                             My Skills
                         </h2>
@@ -119,7 +128,6 @@ const Skills = () => {
                             Technologies and tools I use to build responsive,
                             modern and scalable web applications.
                         </p>
-
                     </div>
                 </FadeIn>
 
@@ -141,12 +149,15 @@ const Skills = () => {
 
                                         <div
                                             key={skill.name}
-                                            className="bg-[#111] border border-white/10 rounded-2xl  w-32 h-36 flex flex-col items-center justify-center hover:border-primary hover:-translate-y-2 transition-all duration-300"                                        >
+                                            className="bg-[#111] border border-white/10 rounded-2xl w-32 h-36 flex flex-col items-center justify-center hover:border-primary hover:-translate-y-2 transition-all duration-300"
+                                        >
 
-                                            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg">                                                {skill.icon}
+                                            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg">
+                                                {skill.icon}
                                             </div>
 
-                                            <h4 className="mt-4 text-base text-white font-medium text-center">                                                {skill.name}
+                                            <h4 className="mt-4 text-base text-white font-medium text-center">
+                                                {skill.name}
                                             </h4>
 
                                         </div>
