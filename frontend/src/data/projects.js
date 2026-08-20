@@ -33,7 +33,7 @@ export const projects = [
             "JWT Authentication"
         ],
         image: "/genai.png",
-        github: "https://github.com/yamunakdk17/project-GENAI",
+        github: "https://github.com/yamunakdk17/genai",
         live: "https://genai-iota-eight.vercel.app/",
     }
 ];
